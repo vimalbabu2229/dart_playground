@@ -8,10 +8,19 @@ void main() {
     22
   ]; //explicitly defines the type as dynamic
   var list4 = ['vimal', false, 22]; //var is dynamic by default
+
+  /**Two dimensional list */
+  List<List<int>> list5 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8]
+  ];
+  print('The two dimensional list is $list5');
+
   //SET
   /**Declaration is same as List , but set cannot take duplicate values */
   Set set1 = {1, 2, 3, 2, 3, 1, 4, 5};
-  print(set1);//{1, 2, 3, 4, 5}
+  print(set1); //{1, 2, 3, 4, 5}
 
   //MAPS
   /**its a key - value pair */

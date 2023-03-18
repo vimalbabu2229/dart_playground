@@ -43,6 +43,23 @@ void main() {
   print('printing the elements using forEach :');
   test2.forEach((element) => print(element));
 
+  //now test2 = [1, 3, 5, 7]
+  print(test2.any((element) => element % 3 == 0)); //true
+  /**any() checks whether any item satisfies the condition
+   * and returns a boolean 
+   */
+
+  print(test2.every((element) => element % 3 == 0)); //false
+  /**checks whether every element satisfies  the condition */
+
+  print(test2.take(2));//(1, 3)
+  /**It takes the elements till the 2nd index excluding 2nd index */
+
+  var newTest = test2.map((element) => element + 100); //(101, 103, 105, 107)
+  /**creates a new list from a list according to the callback used . 
+   * It return a iterable 
+    */
+  print(newTest);
   test.clear(); //will remove all elements in the list
   print(test);
 }
