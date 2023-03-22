@@ -2,10 +2,21 @@ void main() {
   Sample obj = Sample('Vimal', 22, 'BTech'); //or can use var as the type
   obj.display(); //Vimal, 22, BTech
   print(obj.age); //22
-  Sample obj2 = Sample('Vimal', 22, 'BTech');
-  Sample obj3 = Sample('Vimal', 22, 'BTech');
+
+  /**we can use cascade notation (..) to call a function and 
+   * simple dot operator to access the variables direclty at 
+   * the time of object creation.
+   */
+  Sample obj1 = Sample('Vimal Babu', 22, 'BTech')..display(); //Vimal Babu, 22, BTech
+  var course = Sample('Vimal', 20, 'EC').course; //EC
+  print(obj1);//Instance of 'Sample'
+  /**So here the obj1 still holds the instance of the class , so if the 
+   * function returns a value then it cannot be accessed in this way
+   */
+  print(course);//EC
+
   //calling static members
-  print(Sample.getCount());//3
+  print(Sample.getCount()); //3
 }
 
 class Sample {
@@ -16,6 +27,7 @@ class Sample {
 
   Sample(name, age, course) {
     //constructor
+    /**construcor can use default parameters optional parameters */
     this.name = name;
     this.age = age;
     this.course = course;
