@@ -5,8 +5,9 @@ void main() {
   print(sum(3, 4)); //7
   print(sum2(3)); //3
   print(optionalSum(3)); //3
-  print(optionalSum(3, y:4)); //7
+  print(optionalSum(3, y: 4)); //7
   /**The optional parameter should pass by its name  */
+  print(reqParam(param1: 22, param2: 21));//43
 }
 
 /**DEFAULT PARAMETERS */
@@ -34,4 +35,26 @@ int optionalSum(x, {y}) {
    */
 }
 
+/**REQUIRED PARAMETER*/
+/**optional parameters can set as required , there by we tell the 
+ * compiler that the value of the parameter will not be null
+ */
 
+int reqParam({required int param1, required int param2, int? param3}) {
+  return (param1 + param2);
+  /**Here param1 and param2 are required so we don't need to go 
+   * for null check because the function can't be called without 
+   * passing them . The third parameter param3 is not declared 
+   * it means the function can be called without passing that parameter.
+   * This means the parameter can be null so we declared it as nullable 
+   * variable to avoid compilation error.
+   */
+  /**Here the thing is that although the parameters inside the {} are  
+   * optional , using the 'required' they become required parameters
+   * but they need to call by their name . 
+   */
+}
+
+/**optional parameter and required parameter are collectively 
+ * called as the required parameter 
+  */

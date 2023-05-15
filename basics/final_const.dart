@@ -1,3 +1,4 @@
+
 void main() {
   var temp = [1, 3];
   const List x = [10];
@@ -27,7 +28,7 @@ void main() {
    * but only for once .
    */
 
-  final List y = temp; //can assign a vaiable
+  final List y = temp; //can assign a variable
   print(y); //[1, 3]
   y[0] = 33;
   print(y); //[33, 3]
@@ -43,7 +44,7 @@ void main() {
 }
 
 /**In a class a const variable must be static or it will throw error
- * But we can assing value to the final  variable through constructor, but 
+ * But we can assign value to the final  variable through constructor, but 
  * assign once .Means unlike const each instance of a class can have different 
  * values for their final variable
  */
@@ -59,3 +60,12 @@ class Sample {
 }
 
 /**cannot use final or const for methods  */
+
+/**Const is a compile time ,where 
+ * final is the runtime constant 
+ * 
+ * Means the final can be assigned at runtime after the  declaration , but 
+ * that too only once . const should be initialized at the time of
+ * declaration so it is a compile time constant and cannot be change .
+ *  
+ */

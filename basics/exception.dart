@@ -14,3 +14,11 @@ void main() {
     print('unexpected error = $e');
   }
 }
+
+/**To create a new exception we can implement the default
+ * Exception interface 
+ */
+
+class NewException implements Exception{
+  //body
+}
